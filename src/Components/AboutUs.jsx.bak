@@ -1,0 +1,72 @@
+import about_2 from "../assets/about-2.jpg";
+
+
+export default function AboutUs() {
+    return (
+        <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6">
+            <style>{`
+                @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            
+                * {
+                    font-family: 'Poppins', sans-serif;
+                }
+            `}</style>
+            
+            <div className="text-center mb-8 md:mb-12">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800 mb-4">
+                    À propos de Nous
+                </h1>
+            </div>
+
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12 max-w-6xl mx-auto">
+                {/* Image avec bouton play */}
+                <div className="relative w-full lg:w-1/2 max-w-md">
+                    <img 
+                        className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-2xl shadow-2xl shadow-indigo-600/40"
+                        src={about_2}
+                        alt="À propos de Nous"
+                    />
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white size-12 md:size-16 flex items-center justify-center backdrop-blur rounded-full cursor-pointer hover:scale-110 transition-transform">
+                        <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.027 3.371c0-1.374 1.512-2.213 2.678-1.484l9.11 5.693a1.75 1.75 0 0 1 0 2.969l-9.11 5.693c-1.166.729-2.678-.11-2.678-1.484z"
+                                fill="#fff" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                {/* Contenu texte */}
+                <div className="w-full lg:w-1/2 text-gray-600">
+                    <h2 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
+                        Qui Sommes Nous?
+                    </h2>
+                    <div className="w-20 md:w-24 h-1 rounded-full bg-gradient-to-r from-indigo-600 to-[#DDD9FF] mb-6 md:mb-8"></div>
+                    
+                    <div className="space-y-4 md:space-y-6 text-sm md:text-base leading-relaxed">
+                        <p>
+                            Bienvenue à FAC HOTEL, votre destination de choix pour un séjour mémorable. 
+                            Nous nous engageons à offrir une expérience exceptionnelle à chacun de nos clients.
+                        </p>
+                        <p>
+                            Que vous voyagez pour affaires ou pour le plaisir, notre collection de chambres 
+                            soigneusement conçues est créée pour améliorer votre confort et votre expérience.
+                        </p>
+                        <p>
+                            Des systèmes d'hébergement modernes aux aménagements prêts pour votre confort, 
+                            FAC HOTEL vous permet de vous détendre magnifiquement et de profiter pleinement.
+                        </p>
+                    </div>
+                    
+                    <button className="flex items-center gap-2 mt-6 md:mt-8 hover:-translate-y-0.5 transition bg-gradient-to-r from-indigo-600 to-[#8A7DFF] py-3 px-6 md:px-8 rounded-full text-white text-sm md:text-base">
+                        <span>En savoir plus</span>
+                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.53 6.53a.75.75 0 0 0 0-1.06L7.757.697a.75.75 0 1 0-1.06 1.06L10.939 6l-4.242 4.243a.75.75 0 0 0 1.06 1.06zM0 6v.75h12v-1.5H0z"
+                                fill="#fff" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    );
+}
